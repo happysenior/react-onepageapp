@@ -40,28 +40,28 @@ const HomeContainer = styled.div`
     }
   }
 
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     flex-direction: column;
     & > div {
       width: 100%;
-      height: 50%;
     }
   }
 `;
 
 const ProfileWrapper = styled.div`
+  margin-top: 10px;
   padding: 0px 30px 0px 33px;
 `;
 
 const ProfileList = styled.div`
-  height: calc(100vh - 188px);
+  height: calc(100vh - 198px);
   overflow: scroll;
   &::-webkit-scrollbar {
       display: none;
     }
   }
-  @media ${device.mobileL} {
-    height: calc(50vh - 188px);
+  @media ${device.tablet} {
+    height: 100%;
   }
 `;
 

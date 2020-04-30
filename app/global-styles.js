@@ -13,6 +13,13 @@ const GlobalStyle = createGlobalStyle`
     height: 100vh;
     width: 100%;
     line-height: 1.5;
+    @media ${device.desktopL} {
+      background-color: ${colors.backgroundLight};
+    }
+    @media ${device.tablet} {
+      height: 100%;
+      background-color: ${colors.backgroundDark};
+    }
   }
 
   @font-face {
@@ -52,12 +59,6 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100%;
     min-width: 100%;
     height: 100%;
-    @media ${device.desktopL} {
-      background-color: ${colors.backgroundLight};
-    }
-    @media ${device.laptop} {
-      background-color: ${colors.backgroundDark};
-    }
   }
 
   p,

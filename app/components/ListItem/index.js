@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import colors from 'constants/colors';
-
+import device from 'constants/device';
 import Wrapper from './Wrapper';
 import ProfileAvatar from './ProfileAvatar';
 
@@ -12,10 +12,14 @@ const ProfileInfoWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px 0px 20px;
+  padding: 20px 20px 20px 20px;
   border-bottom: 2px solid ${colors.greyLight};
   width: 100%;
   background-color: ${colors.backgroundLight};
+  @media ${device.tablet} {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const UserFullNameWrapper = styled.div`
@@ -24,6 +28,15 @@ const UserFullNameWrapper = styled.div`
   font-size: 16px;
   line-height: 24px;
   color: ${colors.secondaryDark};
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  @media ${device.laptop} {
+    width: 100px;
+  }
+  @media ${device.tablet} {
+    width: 200px;
+  }
 `;
 
 const UserInfo = styled.div``;
@@ -37,6 +50,13 @@ const EmailLabel = styled.div`
   color: ${colors.secondaryDark};
   mix-blend-mode: normal;
   opacity: 0.5;
+
+  @media ${device.tablet} {
+    display: none;
+  }
+  @media ${device.laptop} {
+    display: none;
+  }
 `;
 
 const EmailWrapper = styled.div`
@@ -46,6 +66,17 @@ const EmailWrapper = styled.div`
   line-height: 24px;
   text-align: right;
   color: ${colors.primaryDark};
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @media ${device.laptop} {
+    width: 150px;
+    text-align: left;
+  }
+  @media ${device.tablet} {
+    width: 200px;
+    text-align: left;
+  }
 `;
 
 // eslint-disable-next-line react/prefer-stateless-function

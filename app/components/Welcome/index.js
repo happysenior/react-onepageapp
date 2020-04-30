@@ -51,6 +51,9 @@ const CircleWrapper = styled.div`
   transform: translate(-50%, -50%);
   height: 90%;
   z-index: 1;
+  @media ${device.tablet} {
+    height: 130%;
+  }
 `;
 
 const Circle = styled.img`
@@ -72,6 +75,9 @@ const IconFormWrapper = styled.div`
   height: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
+  @media ${device.tablet} {
+    height: 70%;
+  }
 `;
 
 const IconForm = styled.img`
@@ -91,7 +97,7 @@ const DescriptionLabelWrapper = styled.div`
   display: flex;
   align-items; bottom;
   height: 12%;
-  @media ${device.desktopL} {
+  @media ${device.tablet} {
     display: none;
   }
 `;
@@ -113,7 +119,7 @@ const DescriptionLabel = styled.div`
 const DescriptionWrapper = styled.div`
   display: flex;
   justify-content: center;
-  @media ${device.desktopL} {
+  @media ${device.tablet} {
     display: none;
   }
 `;

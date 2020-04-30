@@ -6,15 +6,13 @@ import styled from 'styled-components';
 import colors from 'constants/colors';
 import device from 'constants/device';
 
-import notificationIcon from 'assets/svg/notification.svg';
-import hamburgerIcon from 'assets/svg/hamburger.svg';
+import { NotificationIcon, HamburgerIcon } from 'components/Icons';
 
 import messages from './messages';
 
 import HeaderLink from './HeaderLink';
 import Navbar from './NavBar';
 import UserAvatar from './UserAvatar';
-import Img from '../Img';
 
 const HeaderWrapper = styled.div`
   display: flex;
@@ -26,7 +24,7 @@ const HeaderWrapper = styled.div`
     }
   }
 
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     flex-direction: column;
     & > div {
       width: 100%;
@@ -37,6 +35,9 @@ const HeaderWrapper = styled.div`
 const NavigationWrapper = styled.div`
   padding: 27px 29px;
   background-color: ${colors.primaryLight};
+  @media ${device.tablet} {
+    display: none;
+  }
 `;
 
 const UserAccountWrapper = styled.div`
@@ -45,8 +46,10 @@ const UserAccountWrapper = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  @media ${device.desktopL} {
+  @media ${device.tablet} {
     justify-content: space-between;
+    background-color: ${colors.primaryLight};
+    border: 1px soild ${colors.primaryLight};
   }
 `;
 
@@ -77,6 +80,14 @@ const NotificationWrapper = styled.div`
 
   &:hover {
     color: ${colors.primaryDark};
+    svg {
+      path {
+        stroke: ${colors.primaryDark};
+      }
+      rect {
+        stroke: ${colors.primaryDark};
+      }
+    }
   }
 `;
 
@@ -89,16 +100,12 @@ const NotificationCount = styled.span`
   letter-spacing: 0.5px;
   text-transform: uppercase;
   margin-left: 4px;
-  color: ${colors.secondaryDark};
 `;
 
 const Hamburger = styled.div`
-  & > img {
+  & > svg {
     width: 15px;
     height: 14px;
-  }
-  &:hover {
-    color: ${colors.primaryDark};
   }
 `;
 
@@ -150,11 +157,11 @@ export default class Header extends React.Component {
           </UserInfo>
           <IconGroup>
             <NotificationWrapper>
-              <Img src={notificationIcon} alt="notification" />
+              <NotificationIcon />
               <NotificationCount>2</NotificationCount>
             </NotificationWrapper>
             <Hamburger>
-              <Img src={hamburgerIcon} alt="hamburger" />
+              <HamburgerIcon />
             </Hamburger>
           </IconGroup>
         </UserAccountWrapper>
