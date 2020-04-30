@@ -1,0 +1,14 @@
+{
+  "boilerplate.components.navagation.browse": "Browse",
+  "boilerplate.components.navagation.howitworks": "How it works",
+  "boilerplate.components.navagation.help": "Help",
+  "boilerplate.components.navagation.About": "About",
+  "boilerplate.containers.HomePage.welcome": "Welcome! Thanks for joining us.",
+  "boilerplate.containers.HomePage.description.label": "Description",
+  "boilerplate.containers.HomePage.description.message": "Hanc ego cum soluta nobis est laborum et accusamus et via procedat oratio. Sed ut ad modum, quaeso, interpretaris? sicine eos censes aut rerum hic tenetur.",
+  "boilerplate.containers.HomePage.profile_list.label": "Profile list",
+  "boilerplate.containers.HomePage.profile_list.message": "Laudem et via procedat oratio quaerimus igitur, quid et accurate disserendum et dolorem?. At magnum periculum adiit in oculis quidem exercitus quid ex ea voluptate et.",
+  "boilerplate.containers.HomePage.user_email_address": "User email address",
+  "boilerplate.containers.HomePage.set_up_your_account": "Set up your account",
+  "boilerplate.containers.NotFoundPage.header": "Page not found."
+}
