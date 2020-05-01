@@ -1,5 +1,5 @@
-import languageProviderReducer from '../reducer';
-import { CHANGE_LOCALE } from '../constants';
+import languageProviderReducer from 'redux/reducers/language';
+import { CHANGE_LOCALE } from 'redux/actionTypes/language';
 
 /* eslint-disable default-case, no-param-reassign */
 describe('languageProviderReducer', () => {

@@ -1,4 +1,4 @@
-import { selectLanguage } from '../selectors';
+import { selectLanguage } from 'redux/selectors/language';
 
 describe('selectLanguage', () => {
   it('should select the global state', () => {

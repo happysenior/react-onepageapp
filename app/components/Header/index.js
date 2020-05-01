@@ -92,7 +92,6 @@ const NotificationWrapper = styled.div`
 `;
 
 const NotificationCount = styled.span`
-  font-family: Roboto Mono;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -102,12 +101,7 @@ const NotificationCount = styled.span`
   margin-left: 4px;
 `;
 
-const Hamburger = styled.div`
-  & > svg {
-    width: 15px;
-    height: 14px;
-  }
-`;
+const Hamburger = styled.div``;
 
 // eslint-disable-next-line react/prefer-stateless-function
 export default class Header extends React.Component {

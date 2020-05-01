@@ -53,3 +53,33 @@ Object {
   "type": "CALL",
 }
 `;
+
+exports[`getRepos Saga should dispatch the userListLoadingSuccessAction if it requests the data successfully 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "combinator": false,
+  "payload": Object {
+    "args": Array [
+      "https://reqres.in/api/users?page=1&per_page=15",
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+  "type": "CALL",
+}
+`;
+
+exports[`getRepos Saga should dispatch the userListLoadingSuccessAction if it requests the data successfully 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "combinator": false,
+  "payload": Object {
+    "action": Object {
+      "error": [TypeError: Cannot read property 'sort' of undefined],
+      "type": "boilerplate/Home/USER_LIST_LOADING_ERROR",
+    },
+    "channel": undefined,
+  },
+  "type": "PUT",
+}
+`;

@@ -57,8 +57,7 @@ const ProfileList = styled.div`
   height: calc(100vh - 198px);
   overflow: scroll;
   &::-webkit-scrollbar {
-      display: none;
-    }
+    display: none;
   }
   @media ${device.tablet} {
     height: 100%;
@@ -66,7 +65,7 @@ const ProfileList = styled.div`
 `;
 
 // eslint-disable-next-line react/prefer-stateless-function
-class HomePage extends React.Component {
+export class HomePage extends React.Component {
   static propTypes = {
     loadUsers: PropTypes.func.isRequired,
     users: PropTypes.array,

@@ -1,6 +1,6 @@
-import { changeLocale } from '../actions';
+import { changeLocale } from 'redux/actions/language';
 
-import { CHANGE_LOCALE } from '../constants';
+import { CHANGE_LOCALE } from 'redux/actionTypes/language';
 
 describe('LanguageProvider actions', () => {
   describe('Change Local Action', () => {

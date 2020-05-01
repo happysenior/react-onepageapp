@@ -1,9 +1,9 @@
-import { selectHome, makeSelectUsername } from '../selectors';
+import { selectHome, makeSelectUserList } from 'redux/selectors/home';
 
 describe('selectHome', () => {
   it('should select the home state', () => {
     const homeState = {
-      userData: {},
+      users: [],
     };
     const mockedState = {
       home: homeState,
@@ -12,15 +12,13 @@ describe('selectHome', () => {
   });
 });
 
-describe('makeSelectUsername', () => {
-  const usernameSelector = makeSelectUsername();
-  it('should select the username', () => {
-    const username = 'mxstbr';
+describe('makeSelectUserList', () => {
+  it('should select users', () => {
     const mockedState = {
       home: {
-        username,
+        users: [],
       },
     };
-    expect(usernameSelector(mockedState)).toEqual(username);
+    expect(makeSelectUserList(mockedState)).toEqual([]);
   });
 });

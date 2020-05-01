@@ -92,10 +92,9 @@ const ButtonWrapper = styled.div`
 `;
 
 const DescriptionLabelWrapper = styled.div`
-  margin: 10px auto 10px auto;
+  margin: 10px 0 10px 0;
   position: relative;
   display: flex;
-  align-items; bottom;
   height: 12%;
   @media ${device.tablet} {
     display: none;
@@ -103,7 +102,6 @@ const DescriptionLabelWrapper = styled.div`
 `;
 
 const DescriptionLabel = styled.div`
-  font-family: Wigrum;
   font-style: normal;
   font-weight: bold;
   line-height: 10px;
@@ -127,7 +125,6 @@ const DescriptionWrapper = styled.div`
 const Description = styled.div`
   width: 504px;
   height: 72px;
-  font-family: Wigrum;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
