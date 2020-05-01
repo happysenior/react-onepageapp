@@ -135,37 +135,46 @@ const Description = styled.div`
   opacity: 0.75;
 `;
 
-const Welcome = () => (
-  <WelcomeWrapper>
-    <Greeting>
-      <WelcomeMessage>
-        <FormattedMessage {...messages.welcome} />
-      </WelcomeMessage>
-    </Greeting>
-    <BackgroundWrapper>
-      <CircleWrapper>
-        <Circle src={circle} alt="circle" />
-      </CircleWrapper>
-      <Pattern src={pattern} alt="pattern" />
-      <IconFormWrapper>
-        <IconForm src={iconForm} alt="iconForm" />
-      </IconFormWrapper>
-    </BackgroundWrapper>
-    <ButtonWrapper>
-      <SetUpButton to="/">
-        <FormattedMessage {...messages.setUpYourAccount} />
-      </SetUpButton>
-    </ButtonWrapper>
-    <DescriptionLabelWrapper>
-      <DescriptionLabel>
-        <FormattedMessage {...messages.descriptionLabel} />
-      </DescriptionLabel>
-    </DescriptionLabelWrapper>
-    <DescriptionWrapper>
-      <Description>
-        <FormattedMessage {...messages.descriptionMessage} />
-      </Description>
-    </DescriptionWrapper>
-  </WelcomeWrapper>
-);
+// eslint-disable-next-line react/prefer-stateless-function
+class Welcome extends React.Component {
+  openNewTab = () => {
+    window.open('https://google.com', '_blank');
+  };
+
+  render() {
+    return (
+      <WelcomeWrapper>
+        <Greeting>
+          <WelcomeMessage>
+            <FormattedMessage {...messages.welcome} />
+          </WelcomeMessage>
+        </Greeting>
+        <BackgroundWrapper>
+          <CircleWrapper>
+            <Circle src={circle} alt="circle" />
+          </CircleWrapper>
+          <Pattern src={pattern} alt="pattern" />
+          <IconFormWrapper>
+            <IconForm src={iconForm} alt="iconForm" />
+          </IconFormWrapper>
+        </BackgroundWrapper>
+        <ButtonWrapper>
+          <SetUpButton onClick={this.openNewTab}>
+            <FormattedMessage {...messages.setUpYourAccount} />
+          </SetUpButton>
+        </ButtonWrapper>
+        <DescriptionLabelWrapper>
+          <DescriptionLabel>
+            <FormattedMessage {...messages.descriptionLabel} />
+          </DescriptionLabel>
+        </DescriptionLabelWrapper>
+        <DescriptionWrapper>
+          <Description>
+            <FormattedMessage {...messages.descriptionMessage} />
+          </Description>
+        </DescriptionWrapper>
+      </WelcomeWrapper>
+    );
+  }
+}
 export default Welcome;

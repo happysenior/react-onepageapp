@@ -1,8 +1,7 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import colors from 'constants/colors';
 
-export default styled(Link)`
+export default styled.button`
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
   -webkit-touch-callout: none;
@@ -21,4 +20,9 @@ export default styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: ${colors.primaryLight};
+  &:hover,
+  &:active {
+    background-color: ${colors.primaryDark};
+  }
 `;
